@@ -1,0 +1,21 @@
+﻿<Window x:Class="UserControlLoadedEventMvvm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserControlLoadedEventMvvm"
+        xmlns:ia="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        mc:Ignorable="d"
+        Height="350" Width="525" WindowStartupLocation="CenterScreen" Title="Handling events in MVVM">
+    <ia:Interaction.Triggers>
+        <ia:EventTrigger EventName="Loaded">
+            <ia:InvokeCommandAction Command="{Binding LoadedCommand}"/>
+        </ia:EventTrigger>
+    </ia:Interaction.Triggers>
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        
+    </Grid>
+</Window>
